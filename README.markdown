@@ -20,7 +20,7 @@ Currently includes a sample Universal project that will run on iPad and iPhone. 
   FSViewController * vc1 = [[FSViewController alloc] init];
 //change background color of second view to differentiate
   [vc1.view setBackgroundColor:[UIColor blueColor]];
-  vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 2" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:0];
+  vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 2" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:1];
 //set the view controllers of the the tab bar controller
   [tc setViewControllers:[NSArray arrayWithObjects:vc,vc1, nil]];
 //set one view controller to be selected
