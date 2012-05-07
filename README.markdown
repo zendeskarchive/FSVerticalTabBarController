@@ -12,29 +12,21 @@ Currently includes a sample Universal project that will run on iPad and iPhone. 
 
 <code>
   FSVerticalTabBarController * tc = [[FSVerticalTabBarController alloc] init];
-
 //Create the first view controller
   FSViewController * vc = [[FSViewController alloc] init];
-
 //Create tabItem for the view controller
   vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 1" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:0];
-
 //create another view controller
   FSViewController * vc1 = [[FSViewController alloc] init];
-
 //change background color of second view to differentiate
   [vc1.view setBackgroundColor:[UIColor blueColor]];
   vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 2" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:0];
-
 //set the view controllers of the the tab bar controller
   [tc setViewControllers:[NSArray arrayWithObjects:vc,vc1, nil]];
-
 //set one view controller to be selected
   [tc setSelectedViewController:vc];
-
 //set the background color to a texture
   [[tc tabBar] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ios-linen.png"]]];
-
 //now add the TabBarController to the window as the root controller
 	[[self window] setRootViewController:tc];
   [[self window] makeKeyAndVisible];
