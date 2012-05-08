@@ -7,7 +7,7 @@
 //
 
 #import "FSVerticalTabBarController.h"
-
+#import "FSViewController.h"
 
 #define DEFAULT_TAB_BAR_HEIGHT 100.0
 
@@ -21,6 +21,35 @@
 @synthesize selectedIndex = _selectedIndex;
 @synthesize tabBarWidth = _tabBarWidth;
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+  if (self = [super initWithCoder:aDecoder]) {
+    self.tabBarWidth = DEFAULT_TAB_BAR_HEIGHT;
+    self.selectedIndex = INT_MAX;
+    
+    //Create the first view controller
+    FSViewController * vc = [[FSViewController alloc] init];
+    
+    //Create tabItem for the view controller
+    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 1" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:0];
+    
+    //create another view controller
+    FSViewController * vc1 = [[FSViewController alloc] init];
+    
+    //change background color of second view to differentiate
+    [vc1.view setBackgroundColor:[UIColor blueColor]];
+    vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 2" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:1];
+    
+    //set the view controllers of the the tab bar controller
+    [self setViewControllers:[NSArray arrayWithObjects:vc,vc1, nil]];
+    
+    //set one view controller to be selected
+    [self setSelectedViewController:vc];
+    
+    //set the background color to a texture
+    [[self tabBar] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ios-linen.png"]]];
+  }
+  return self;
+}
 
 - (FSVerticalTabBar *)tabBar
 {

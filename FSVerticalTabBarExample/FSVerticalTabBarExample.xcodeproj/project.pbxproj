@@ -22,6 +22,8 @@
 		FD1AC83A15584E5400A8E36A /* magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83815584E5400A8E36A /* magnifying-glass.png */; };
 		FD1AC83B15584E5400A8E36A /* magnifying-glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */; };
 		FD1AC8411558570C00A8E36A /* ios-linen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC8401558570C00A8E36A /* ios-linen.png */; };
+		FD27F21515596C5E0054F11E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */; };
+		FD27F21615596C5E0054F11E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		FD1AC83815584E5400A8E36A /* magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass.png"; sourceTree = "<group>"; };
 		FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass@2x.png"; sourceTree = "<group>"; };
 		FD1AC8401558570C00A8E36A /* ios-linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-linen.png"; sourceTree = "<group>"; };
+		FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPhone.storyboard; path = ../MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPad.storyboard; path = ../MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 		FD1AC81015584B7300A8E36A /* FSVerticalTabBarExample */ = {
 			isa = PBXGroup;
 			children = (
+				FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */,
+				FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */,
 				FD1AC81915584B7300A8E36A /* FSAppDelegate.h */,
 				FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */,
 				FD1AC82215584B7300A8E36A /* FSViewController.h */,
@@ -190,6 +196,8 @@
 				FD1AC83A15584E5400A8E36A /* magnifying-glass.png in Resources */,
 				FD1AC83B15584E5400A8E36A /* magnifying-glass@2x.png in Resources */,
 				FD1AC8411558570C00A8E36A /* ios-linen.png in Resources */,
+				FD27F21515596C5E0054F11E /* MainStoryboard_iPhone.storyboard in Resources */,
+				FD27F21615596C5E0054F11E /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +319,7 @@
 				FD1AC82915584B7300A8E36A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
