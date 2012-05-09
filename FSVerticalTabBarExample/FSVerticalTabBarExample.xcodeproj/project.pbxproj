@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD1AC80B15584B7300A8E36A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80A15584B7300A8E36A /* UIKit.framework */; };
+		FD1AC80D15584B7300A8E36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80C15584B7300A8E36A /* Foundation.framework */; };
+		FD1AC80F15584B7300A8E36A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */; };
+		FD1AC81515584B7300A8E36A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC81315584B7300A8E36A /* InfoPlist.strings */; };
+		FD1AC81715584B7300A8E36A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC81615584B7300A8E36A /* main.m */; };
+		FD1AC81B15584B7300A8E36A /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */; };
+		FD1AC82415584B7300A8E36A /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC82315584B7300A8E36A /* FSViewController.m */; };
+		FD1AC83315584B8400A8E36A /* FSVerticalTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC82C15584B8400A8E36A /* FSVerticalTabBar.m */; };
+		FD1AC83415584B8400A8E36A /* FSVerticalTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC82E15584B8400A8E36A /* FSVerticalTabBarButton.m */; };
+		FD1AC83515584B8400A8E36A /* FSVerticalTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC83015584B8400A8E36A /* FSVerticalTabBarController.m */; };
+		FD1AC83615584B8400A8E36A /* selectionIndicatorImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83115584B8400A8E36A /* selectionIndicatorImage.png */; };
+		FD1AC83715584B8400A8E36A /* selectionIndicatorImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83215584B8400A8E36A /* selectionIndicatorImage@2x.png */; };
+		FD1AC83A15584E5400A8E36A /* magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83815584E5400A8E36A /* magnifying-glass.png */; };
+		FD1AC83B15584E5400A8E36A /* magnifying-glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */; };
+		FD1AC8411558570C00A8E36A /* ios-linen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC8401558570C00A8E36A /* ios-linen.png */; };
+		FD27F21515596C5E0054F11E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */; };
+		FD27F21615596C5E0054F11E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD1AC80615584B7300A8E36A /* FSVerticalTabBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSVerticalTabBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1AC80A15584B7300A8E36A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FD1AC80C15584B7300A8E36A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FD1AC81215584B7300A8E36A /* FSVerticalTabBarExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSVerticalTabBarExample-Info.plist"; sourceTree = "<group>"; };
+		FD1AC81415584B7300A8E36A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD1AC81615584B7300A8E36A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD1AC81815584B7300A8E36A /* FSVerticalTabBarExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSVerticalTabBarExample-Prefix.pch"; sourceTree = "<group>"; };
+		FD1AC81915584B7300A8E36A /* FSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
+		FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
+		FD1AC82215584B7300A8E36A /* FSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSViewController.h; sourceTree = "<group>"; };
+		FD1AC82315584B7300A8E36A /* FSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSViewController.m; sourceTree = "<group>"; };
+		FD1AC82B15584B8400A8E36A /* FSVerticalTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVerticalTabBar.h; sourceTree = "<group>"; };
+		FD1AC82C15584B8400A8E36A /* FSVerticalTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVerticalTabBar.m; sourceTree = "<group>"; };
+		FD1AC82D15584B8400A8E36A /* FSVerticalTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVerticalTabBarButton.h; sourceTree = "<group>"; };
+		FD1AC82E15584B8400A8E36A /* FSVerticalTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVerticalTabBarButton.m; sourceTree = "<group>"; };
+		FD1AC82F15584B8400A8E36A /* FSVerticalTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVerticalTabBarController.h; sourceTree = "<group>"; };
+		FD1AC83015584B8400A8E36A /* FSVerticalTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVerticalTabBarController.m; sourceTree = "<group>"; };
+		FD1AC83115584B8400A8E36A /* selectionIndicatorImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectionIndicatorImage.png; sourceTree = "<group>"; };
+		FD1AC83215584B8400A8E36A /* selectionIndicatorImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectionIndicatorImage@2x.png"; sourceTree = "<group>"; };
+		FD1AC83815584E5400A8E36A /* magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass.png"; sourceTree = "<group>"; };
+		FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass@2x.png"; sourceTree = "<group>"; };
+		FD1AC8401558570C00A8E36A /* ios-linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-linen.png"; sourceTree = "<group>"; };
+		FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPhone.storyboard; path = ../MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPad.storyboard; path = ../MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD1AC80315584B7300A8E36A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1AC80B15584B7300A8E36A /* UIKit.framework in Frameworks */,
+				FD1AC80D15584B7300A8E36A /* Foundation.framework in Frameworks */,
+				FD1AC80F15584B7300A8E36A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD1AC7FB15584B7300A8E36A = {
+			isa = PBXGroup;
+			children = (
+				FD1AC8401558570C00A8E36A /* ios-linen.png */,
+				FD1AC83815584E5400A8E36A /* magnifying-glass.png */,
+				FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */,
+				FD1AC82A15584B8400A8E36A /* src */,
+				FD1AC81015584B7300A8E36A /* FSVerticalTabBarExample */,
+				FD1AC80915584B7300A8E36A /* Frameworks */,
+				FD1AC80715584B7300A8E36A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD1AC80715584B7300A8E36A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AC80615584B7300A8E36A /* FSVerticalTabBarExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD1AC80915584B7300A8E36A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AC80A15584B7300A8E36A /* UIKit.framework */,
+				FD1AC80C15584B7300A8E36A /* Foundation.framework */,
+				FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD1AC81015584B7300A8E36A /* FSVerticalTabBarExample */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */,
+				FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */,
+				FD1AC81915584B7300A8E36A /* FSAppDelegate.h */,
+				FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */,
+				FD1AC82215584B7300A8E36A /* FSViewController.h */,
+				FD1AC82315584B7300A8E36A /* FSViewController.m */,
+				FD1AC81115584B7300A8E36A /* Supporting Files */,
+			);
+			path = FSVerticalTabBarExample;
+			sourceTree = "<group>";
+		};
+		FD1AC81115584B7300A8E36A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AC81215584B7300A8E36A /* FSVerticalTabBarExample-Info.plist */,
+				FD1AC81315584B7300A8E36A /* InfoPlist.strings */,
+				FD1AC81615584B7300A8E36A /* main.m */,
+				FD1AC81815584B7300A8E36A /* FSVerticalTabBarExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD1AC82A15584B8400A8E36A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AC82B15584B8400A8E36A /* FSVerticalTabBar.h */,
+				FD1AC82C15584B8400A8E36A /* FSVerticalTabBar.m */,
+				FD1AC82D15584B8400A8E36A /* FSVerticalTabBarButton.h */,
+				FD1AC82E15584B8400A8E36A /* FSVerticalTabBarButton.m */,
+				FD1AC82F15584B8400A8E36A /* FSVerticalTabBarController.h */,
+				FD1AC83015584B8400A8E36A /* FSVerticalTabBarController.m */,
+				FD1AC83115584B8400A8E36A /* selectionIndicatorImage.png */,
+				FD1AC83215584B8400A8E36A /* selectionIndicatorImage@2x.png */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD1AC80515584B7300A8E36A /* FSVerticalTabBarExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD1AC82715584B7300A8E36A /* Build configuration list for PBXNativeTarget "FSVerticalTabBarExample" */;
+			buildPhases = (
+				FD1AC80215584B7300A8E36A /* Sources */,
+				FD1AC80315584B7300A8E36A /* Frameworks */,
+				FD1AC80415584B7300A8E36A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSVerticalTabBarExample;
+			productName = FSVerticalTabBarExample;
+			productReference = FD1AC80615584B7300A8E36A /* FSVerticalTabBarExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD1AC7FD15584B7300A8E36A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FS;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = FD1AC80015584B7300A8E36A /* Build configuration list for PBXProject "FSVerticalTabBarExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD1AC7FB15584B7300A8E36A;
+			productRefGroup = FD1AC80715584B7300A8E36A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD1AC80515584B7300A8E36A /* FSVerticalTabBarExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD1AC80415584B7300A8E36A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1AC81515584B7300A8E36A /* InfoPlist.strings in Resources */,
+				FD1AC83615584B8400A8E36A /* selectionIndicatorImage.png in Resources */,
+				FD1AC83715584B8400A8E36A /* selectionIndicatorImage@2x.png in Resources */,
+				FD1AC83A15584E5400A8E36A /* magnifying-glass.png in Resources */,
+				FD1AC83B15584E5400A8E36A /* magnifying-glass@2x.png in Resources */,
+				FD1AC8411558570C00A8E36A /* ios-linen.png in Resources */,
+				FD27F21515596C5E0054F11E /* MainStoryboard_iPhone.storyboard in Resources */,
+				FD27F21615596C5E0054F11E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD1AC80215584B7300A8E36A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1AC81715584B7300A8E36A /* main.m in Sources */,
+				FD1AC81B15584B7300A8E36A /* FSAppDelegate.m in Sources */,
+				FD1AC82415584B7300A8E36A /* FSViewController.m in Sources */,
+				FD1AC83315584B8400A8E36A /* FSVerticalTabBar.m in Sources */,
+				FD1AC83415584B8400A8E36A /* FSVerticalTabBarButton.m in Sources */,
+				FD1AC83515584B8400A8E36A /* FSVerticalTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD1AC81315584B7300A8E36A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD1AC81415584B7300A8E36A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD1AC82515584B7300A8E36A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD1AC82615584B7300A8E36A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD1AC82815584B7300A8E36A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSVerticalTabBarExample/FSVerticalTabBarExample-Prefix.pch";
+				INFOPLIST_FILE = "FSVerticalTabBarExample/FSVerticalTabBarExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FD1AC82915584B7300A8E36A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSVerticalTabBarExample/FSVerticalTabBarExample-Prefix.pch";
+				INFOPLIST_FILE = "FSVerticalTabBarExample/FSVerticalTabBarExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD1AC80015584B7300A8E36A /* Build configuration list for PBXProject "FSVerticalTabBarExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1AC82515584B7300A8E36A /* Debug */,
+				FD1AC82615584B7300A8E36A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD1AC82715584B7300A8E36A /* Build configuration list for PBXNativeTarget "FSVerticalTabBarExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1AC82815584B7300A8E36A /* Debug */,
+				FD1AC82915584B7300A8E36A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD1AC7FD15584B7300A8E36A /* Project object */;
+}
