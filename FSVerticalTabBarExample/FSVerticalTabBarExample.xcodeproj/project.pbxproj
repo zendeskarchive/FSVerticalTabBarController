@@ -18,7 +18,7 @@
 		FD1AC81515584B7300A8E36A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC81315584B7300A8E36A /* InfoPlist.strings */; };
 		FD1AC81715584B7300A8E36A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC81615584B7300A8E36A /* main.m */; };
 		FD1AC81B15584B7300A8E36A /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */; };
-		FD1AC82415584B7300A8E36A /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC82315584B7300A8E36A /* FSViewController.m */; };
+		FD1AC82415584B7300A8E36A /* FSVerticalTabBarExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AC82315584B7300A8E36A /* FSVerticalTabBarExampleController.m */; };
 		FD1AC83A15584E5400A8E36A /* magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83815584E5400A8E36A /* magnifying-glass.png */; };
 		FD1AC83B15584E5400A8E36A /* magnifying-glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */; };
 		FD1AC8411558570C00A8E36A /* ios-linen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC8401558570C00A8E36A /* ios-linen.png */; };
@@ -31,7 +31,7 @@
 		0923DAE915656F6A004CFAB8 /* FSVerticalTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBar.m; path = ../src/FSVerticalTabBar.m; sourceTree = SOURCE_ROOT; };
 		0923DAEA15656F6A004CFAB8 /* FSVerticalTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; name = FSVerticalTabBarButton.h; path = ../src/FSVerticalTabBarButton.h; sourceTree = SOURCE_ROOT; };
 		0923DAEB15656F6A004CFAB8 /* FSVerticalTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarButton.m; path = ../src/FSVerticalTabBarButton.m; sourceTree = SOURCE_ROOT; };
-		0923DAEC15656F6A004CFAB8 /* FSVerticalTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = FSVerticalTabBarController.h; path = ../src/FSVerticalTabBarController.h; sourceTree = SOURCE_ROOT; };
+		0923DAEC15656F6A004CFAB8 /* FSVerticalTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBarController.h; path = ../src/FSVerticalTabBarController.h; sourceTree = SOURCE_ROOT; };
 		0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarController.m; path = ../src/FSVerticalTabBarController.m; sourceTree = SOURCE_ROOT; };
 		0923DAEE15656F6A004CFAB8 /* selectionIndicatorImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selectionIndicatorImage.png; path = ../src/selectionIndicatorImage.png; sourceTree = SOURCE_ROOT; };
 		0923DAEF15656F6A004CFAB8 /* selectionIndicatorImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectionIndicatorImage@2x.png"; path = "../src/selectionIndicatorImage@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -45,8 +45,8 @@
 		FD1AC81815584B7300A8E36A /* FSVerticalTabBarExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSVerticalTabBarExample-Prefix.pch"; sourceTree = "<group>"; };
 		FD1AC81915584B7300A8E36A /* FSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
 		FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
-		FD1AC82215584B7300A8E36A /* FSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSViewController.h; sourceTree = "<group>"; };
-		FD1AC82315584B7300A8E36A /* FSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSViewController.m; sourceTree = "<group>"; };
+		FD1AC82215584B7300A8E36A /* FSVerticalTabBarExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSVerticalTabBarExampleController.h; sourceTree = "<group>"; };
+		FD1AC82315584B7300A8E36A /* FSVerticalTabBarExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSVerticalTabBarExampleController.m; sourceTree = "<group>"; };
 		FD1AC83815584E5400A8E36A /* magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass.png"; sourceTree = "<group>"; };
 		FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass@2x.png"; sourceTree = "<group>"; };
 		FD1AC8401558570C00A8E36A /* ios-linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-linen.png"; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 				FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */,
 				FD1AC81915584B7300A8E36A /* FSAppDelegate.h */,
 				FD1AC81A15584B7300A8E36A /* FSAppDelegate.m */,
-				FD1AC82215584B7300A8E36A /* FSViewController.h */,
-				FD1AC82315584B7300A8E36A /* FSViewController.m */,
+				FD1AC82215584B7300A8E36A /* FSVerticalTabBarExampleController.h */,
+				FD1AC82315584B7300A8E36A /* FSVerticalTabBarExampleController.m */,
 				FD1AC81115584B7300A8E36A /* Supporting Files */,
 			);
 			path = FSVerticalTabBarExample;
@@ -211,7 +211,7 @@
 			files = (
 				FD1AC81715584B7300A8E36A /* main.m in Sources */,
 				FD1AC81B15584B7300A8E36A /* FSAppDelegate.m in Sources */,
-				FD1AC82415584B7300A8E36A /* FSViewController.m in Sources */,
+				FD1AC82415584B7300A8E36A /* FSVerticalTabBarExampleController.m in Sources */,
 				0923DAF015656F6A004CFAB8 /* FSVerticalTabBar.m in Sources */,
 				0923DAF115656F6A004CFAB8 /* FSVerticalTabBarButton.m in Sources */,
 				0923DAF215656F6A004CFAB8 /* FSVerticalTabBarController.m in Sources */,

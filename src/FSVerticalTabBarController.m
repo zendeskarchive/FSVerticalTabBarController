@@ -12,6 +12,11 @@
 #define DEFAULT_TAB_BAR_HEIGHT 100.0
 
 
+@interface FSVerticalTabBarController ()
+- (void)_performInitialization;
+@end
+
+
 @implementation FSVerticalTabBarController
 
 
@@ -110,14 +115,30 @@
 }
 
 
+- (void)_performInitialization
+{
+    self.tabBarWidth = DEFAULT_TAB_BAR_HEIGHT;
+    self.selectedIndex = INT_MAX;
+}
+
+
 #pragma mark -
 #pragma mark UIViewController
 - (id)init
 {
     if ((self = [super init]))
     {
-        self.tabBarWidth = DEFAULT_TAB_BAR_HEIGHT;
-        self.selectedIndex = INT_MAX;
+        [self _performInitialization];
+    }
+    return self;
+}
+
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder]))
+    {
+        [self _performInitialization];
     }
     return self;
 }
