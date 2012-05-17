@@ -49,7 +49,7 @@
     // draw an image in the center of the cell
     CGSize imageSize = self.iconImage.size;
     CGRect imageRect = CGRectMake(floorf(((bounds.size.width-imageSize.width)/2.0)),
-                                  floorf(((bounds.size.height-imageSize.height)/2.0)),
+                                  floorf(((bounds.size.height-imageSize.height)/2.0)+15),
                                   imageSize.width,
                                   imageSize.height);
     
@@ -108,7 +108,7 @@
                                        NAN,
                                        self.bounds.size.width,
                                        self.textLabel.font.lineHeight);
-    textLabelFrame.origin.y = self.bounds.size.height-textLabelFrame.size.height;
+    textLabelFrame.origin.y = self.bounds.size.height-textLabelFrame.size.height - 15;
     self.textLabel.frame = textLabelFrame;
 }
 
