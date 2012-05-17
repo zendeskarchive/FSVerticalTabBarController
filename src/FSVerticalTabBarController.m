@@ -74,7 +74,6 @@
     self.selectedIndex = [self.viewControllers indexOfObject:selectedViewController];
 }
 
-
 - (void)setSelectedIndex:(NSUInteger)selectedIndex
 {
     if (selectedIndex != _selectedIndex && selectedIndex < [self.viewControllers count])
@@ -183,6 +182,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self setSelectedIndex:indexPath.row];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BOOL result;
+    
+    if ([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
+        UIViewController *newController = [self.viewControllers objectAtIndex:indexPath.row];
+        result = [self.delegate tabBarController:self shouldSelectViewController:newController];
+    }
+    
+    if (result) {
+        return indexPath;
+    }
+    else {
+        return tableView.indexPathForSelectedRow;
+    }
 }
 
 

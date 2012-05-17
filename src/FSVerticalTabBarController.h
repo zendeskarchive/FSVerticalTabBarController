@@ -16,6 +16,7 @@
 @protocol FSTabBarControllerDelegate <NSObject>
 @optional
 - (void)tabBarController:(FSVerticalTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController;
+- (BOOL)tabBarController:(FSVerticalTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController;
 @end
 
 
