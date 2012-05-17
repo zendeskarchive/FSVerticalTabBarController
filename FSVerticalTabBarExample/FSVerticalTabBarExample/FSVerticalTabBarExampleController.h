@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSVerticalTabBarController.h"
 
-@interface FSViewController : UIViewController
+@interface FSVerticalTabBarExampleController : FSVerticalTabBarController
+
 
 @end

@@ -22,6 +22,13 @@
 @synthesize selectionIndicatorImage = _selectionIndicatorImage;
 
 
+- (void)setItems:(NSArray *)items
+{
+    _items = [items copy];
+    [self reloadData];
+}
+
+
 - (void)setSelectionIndicatorImage:(UIImage *)selectionIndicatorImage
 {
     _selectionIndicatorImage = selectionIndicatorImage;

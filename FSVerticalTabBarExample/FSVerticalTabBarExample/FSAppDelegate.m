@@ -8,7 +8,6 @@
 
 #import "FSAppDelegate.h"
 #import "FSVerticalTabBarController.h"
-#import "FSViewController.h"
 
 @implementation FSAppDelegate
 
@@ -16,6 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+       [[FSVerticalTabBarController alloc] init];
      return YES;
 }
 							
