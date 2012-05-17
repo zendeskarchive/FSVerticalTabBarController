@@ -55,6 +55,9 @@
     }
     
     // select first VC from the new array
+    // sets the value for the first time as -1 for the viewController to load itself properly
+    _selectedIndex = -1;
+    
     self.selectedIndex = [viewControllers count] > 0 ? 0 : INT_MAX;
 }
 
@@ -90,7 +93,7 @@
         [self.view addSubview:selectedViewController.view];
         
         // remove previously selected view controller (if any)
-        if (_selectedIndex < INT_MAX)
+        if (-1 < _selectedIndex && _selectedIndex < INT_MAX)
         {
             UIViewController *previousViewController = [self.viewControllers objectAtIndex:_selectedIndex];
             [previousViewController.view removeFromSuperview];
