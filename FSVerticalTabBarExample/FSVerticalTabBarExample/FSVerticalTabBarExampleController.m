@@ -9,8 +9,10 @@
 #import "FSVerticalTabBarExampleController.h"
 #import "FSVerticalTabBarController.h"
 
-@interface FSVerticalTabBarExampleController ()
-
+@interface FSVerticalTabBarExampleController () {
+    NSArray* viewControllers;
+}
+    
 @end
 
 @implementation FSVerticalTabBarExampleController
@@ -18,29 +20,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.delegate = self;
     
-    //Create the first view controller
-    UIViewController * viewRed = [[UIViewController alloc] init];
+    //Create view controllers
+    NSMutableArray* controllersToAdd = [[NSMutableArray alloc] init];
+    for (int i=0; i<4; i++) {
+        UIViewController * view = [[UIViewController alloc] init];
+        NSString * title = [NSString stringWithFormat:@"tab %d", i+1];
+        view.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:@"magnifying-glass.png"] tag: 0];
+        [controllersToAdd addObject:view];
+    }
     
-    //Create tabItem for the view controller
-    viewRed.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 1" image:[UIImage imageNamed:@"magnifying-glass.png"] tag: 0];
-    [viewRed.view setBackgroundColor:[UIColor redColor]];
+    [((UIViewController*)[controllersToAdd objectAtIndex:0]).view setBackgroundColor:[UIColor blueColor]];
+    [((UIViewController*)[controllersToAdd objectAtIndex:1]).view setBackgroundColor:[UIColor redColor]];
+    [((UIViewController*)[controllersToAdd objectAtIndex:2]).view setBackgroundColor:[UIColor greenColor]];
+    [((UIViewController*)[controllersToAdd objectAtIndex:3]).view setBackgroundColor:[UIColor purpleColor]];
+    
 
-    //create another view controller
-    UIViewController *viewBlue = [[UIViewController alloc] init];
-    
-    //change background color of second view to differentiate
-    [viewBlue.view setBackgroundColor:[UIColor blueColor]];
-    viewBlue.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"tab 2" image:[UIImage imageNamed:@"magnifying-glass.png"] tag:1];
+    viewControllers = [NSArray arrayWithArray:controllersToAdd];
     
     //set the view controllers of the the tab bar controller
-    [self setViewControllers:[NSArray arrayWithObjects:viewRed,viewBlue, nil]];
+    [self setViewControllers:viewControllers];
         
     //set the background color to a texture
     [[self tabBar] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ios-linen.png"]]];
+    self.selectedViewController = ((UIViewController*)[viewControllers objectAtIndex:1]);
 }
 
-- (void)viewDidUnload
+- (void)viewDidUnload 
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -53,6 +60,13 @@
   } else {
       return YES;
   }
+}
+
+-(BOOL)tabBarController:(FSVerticalTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    if ([viewControllers indexOfObject:viewController] == 3) {
+        return NO;
+    }
+    return YES;
 }
 
 @end
