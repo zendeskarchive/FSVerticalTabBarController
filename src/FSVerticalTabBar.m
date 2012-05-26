@@ -8,6 +8,7 @@
 
 #import "FSVerticalTabBar.h"
 #import "FSVerticalTabBarButton.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 #define DEFAULT_ITEM_HEIGHT 80.0
@@ -20,7 +21,7 @@
 @synthesize backgroundImage = _backgroundImage;
 @synthesize selectedImageTintColor = _selectedImageTintColor;
 @synthesize selectionIndicatorImage = _selectionIndicatorImage;
-
+@synthesize backgroundGradientColors = _backgroundGradientColors;
 
 - (void)setItems:(NSArray *)items
 {
@@ -44,6 +45,37 @@
     [self reloadData];
 }
 
+- (void)setBackgroundGradientColors:(NSArray *)colors
+{
+    if (![colors isEqualToArray:_backgroundGradientColors]) {
+        _backgroundGradientColors = colors;
+        
+        if (!self.backgroundView) {
+            self.backgroundView = [UIView new];
+            self.backgroundColor = [UIColor clearColor];
+            
+        }
+        
+        NSArray *backgroundSublayers = [self.backgroundView.layer sublayers];
+        
+        for (id layer in backgroundSublayers) {
+            if ([layer isKindOfClass:[CAGradientLayer class]]) {
+                CAGradientLayer *gradientLayer = (CAGradientLayer *)layer;
+                [gradientLayer removeFromSuperlayer]; // if gradient layer is already added, remove it
+            }
+        }
+        
+        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+        gradientLayer.frame = self.bounds;
+        gradientLayer.colors = colors;
+        gradientLayer.startPoint = CGPointMake(0.0, 0.5); // start point of gradient drawing (left side)
+        gradientLayer.endPoint = CGPointMake(1.0, 0.5);  // end point of gradient drawing (right side)
+        
+        [self.backgroundView.layer addSublayer:gradientLayer];
+        
+    }
+    
+}
 
 - (void)setBackgroundImage:(UIImage *)backgroundImage
 {
