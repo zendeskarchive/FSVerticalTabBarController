@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061C61F215712A3E00E644A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061C61F115712A3E00E644A0 /* QuartzCore.framework */; };
 		0923DAF015656F6A004CFAB8 /* FSVerticalTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAE915656F6A004CFAB8 /* FSVerticalTabBar.m */; };
 		0923DAF115656F6A004CFAB8 /* FSVerticalTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAEB15656F6A004CFAB8 /* FSVerticalTabBarButton.m */; };
 		0923DAF215656F6A004CFAB8 /* FSVerticalTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */; };
@@ -27,9 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061C61F115712A3E00E644A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0923DAE815656F6A004CFAB8 /* FSVerticalTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBar.h; path = ../src/FSVerticalTabBar.h; sourceTree = SOURCE_ROOT; };
 		0923DAE915656F6A004CFAB8 /* FSVerticalTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBar.m; path = ../src/FSVerticalTabBar.m; sourceTree = SOURCE_ROOT; };
-		0923DAEA15656F6A004CFAB8 /* FSVerticalTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; name = FSVerticalTabBarButton.h; path = ../src/FSVerticalTabBarButton.h; sourceTree = SOURCE_ROOT; };
+		0923DAEA15656F6A004CFAB8 /* FSVerticalTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBarButton.h; path = ../src/FSVerticalTabBarButton.h; sourceTree = SOURCE_ROOT; };
 		0923DAEB15656F6A004CFAB8 /* FSVerticalTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarButton.m; path = ../src/FSVerticalTabBarButton.m; sourceTree = SOURCE_ROOT; };
 		0923DAEC15656F6A004CFAB8 /* FSVerticalTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBarController.h; path = ../src/FSVerticalTabBarController.h; sourceTree = SOURCE_ROOT; };
 		0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarController.m; path = ../src/FSVerticalTabBarController.m; sourceTree = SOURCE_ROOT; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061C61F215712A3E00E644A0 /* QuartzCore.framework in Frameworks */,
 				FD1AC80B15584B7300A8E36A /* UIKit.framework in Frameworks */,
 				FD1AC80D15584B7300A8E36A /* Foundation.framework in Frameworks */,
 				FD1AC80F15584B7300A8E36A /* CoreGraphics.framework in Frameworks */,
@@ -92,6 +95,7 @@
 		FD1AC80915584B7300A8E36A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				061C61F115712A3E00E644A0 /* QuartzCore.framework */,
 				FD1AC80A15584B7300A8E36A /* UIKit.framework */,
 				FD1AC80C15584B7300A8E36A /* Foundation.framework */,
 				FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */,

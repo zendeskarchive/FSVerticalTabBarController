@@ -43,7 +43,10 @@
     [self setViewControllers:viewControllers];
         
     //set the background color to a texture
-    [[self tabBar] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ios-linen.png"]]];
+    //[[self tabBar] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ios-linen.png"]]];
+    NSArray *colors = [NSArray arrayWithObjects:(id)[UIColor whiteColor].CGColor,(id)[UIColor lightGrayColor].CGColor, nil];
+    self.tabBar.backgroundGradientColors = colors;
+    
     self.selectedViewController = ((UIViewController*)[viewControllers objectAtIndex:1]);
 }
 
