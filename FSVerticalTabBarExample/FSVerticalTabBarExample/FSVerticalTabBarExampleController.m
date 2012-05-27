@@ -34,6 +34,7 @@
     [((UIViewController*)[controllersToAdd objectAtIndex:0]).view setBackgroundColor:[UIColor blueColor]];
     [((UIViewController*)[controllersToAdd objectAtIndex:1]).view setBackgroundColor:[UIColor redColor]];
     [((UIViewController*)[controllersToAdd objectAtIndex:2]).view setBackgroundColor:[UIColor greenColor]];
+    //[((UIViewController*)[controllersToAdd objectAtIndex:3]).view setBackgroundColor:[UIColor purpleColor]];
     [((UIViewController*)[controllersToAdd objectAtIndex:3]).view setBackgroundColor:[UIColor purpleColor]];
     
 
@@ -44,10 +45,10 @@
         
     //set the background color to a texture
     //[[self tabBar] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ios-linen.png"]]];
-    NSArray *colors = [NSArray arrayWithObjects:(id)[UIColor whiteColor].CGColor,(id)[UIColor lightGrayColor].CGColor, nil];
-    self.tabBar.backgroundGradientColors = colors;
+    [[self tabBar] setTintColor:[UIColor grayColor]];
+    [[self tabBar] setDrawGloss:YES];
     
-    self.selectedViewController = ((UIViewController*)[viewControllers objectAtIndex:1]);
+    self.selectedViewController = ((UIViewController*)[viewControllers objectAtIndex:3]);
 }
 
 - (void)viewDidUnload 

@@ -16,12 +16,12 @@
 
 @implementation FSVerticalTabBar
 
-
 @synthesize items = _items;
 @synthesize backgroundImage = _backgroundImage;
 @synthesize selectedImageTintColor = _selectedImageTintColor;
 @synthesize selectionIndicatorImage = _selectionIndicatorImage;
-@synthesize backgroundGradientColors = _backgroundGradientColors;
+@synthesize drawGloss = _drawGloss;
+@synthesize tintColor = _tintColor;
 
 - (void)setItems:(NSArray *)items
 {
@@ -43,38 +43,6 @@
     _selectedImageTintColor = selectedImageTintColor;
     // apply changes
     [self reloadData];
-}
-
-- (void)setBackgroundGradientColors:(NSArray *)colors
-{
-    if (![colors isEqualToArray:_backgroundGradientColors]) {
-        _backgroundGradientColors = colors;
-        
-        if (!self.backgroundView) {
-            self.backgroundView = [UIView new];
-            self.backgroundColor = [UIColor clearColor];
-            
-        }
-        
-        NSArray *backgroundSublayers = [self.backgroundView.layer sublayers];
-        
-        for (id layer in backgroundSublayers) {
-            if ([layer isKindOfClass:[CAGradientLayer class]]) {
-                CAGradientLayer *gradientLayer = (CAGradientLayer *)layer;
-                [gradientLayer removeFromSuperlayer]; // if gradient layer is already added, remove it
-            }
-        }
-        
-        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-        gradientLayer.frame = self.bounds;
-        gradientLayer.colors = colors;
-        gradientLayer.startPoint = CGPointMake(0.0, 0.5); // start point of gradient drawing (left side)
-        gradientLayer.endPoint = CGPointMake(1.0, 0.5);  // end point of gradient drawing (right side)
-        
-        [self.backgroundView.layer addSublayer:gradientLayer];
-        
-    }
-    
 }
 
 - (void)setBackgroundImage:(UIImage *)backgroundImage
@@ -121,6 +89,67 @@
     }
 }
 
+- (void)setDrawGloss:(BOOL)drawGloss
+{
+    if (drawGloss != _drawGloss) {
+        _drawGloss = drawGloss;
+        
+        self.backgroundColor = [UIColor clearColor];
+        
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)setTintColor:(UIColor *)tintColor
+{
+    if (tintColor != _tintColor) {
+        _tintColor = tintColor;
+        self.backgroundColor = tintColor;
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    
+    if (self.drawGloss && self.backgroundImage == nil) 
+    {
+        CGRect bounds = self.bounds;
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextSaveGState(context);
+        
+        // flip the coordinates system
+        CGContextTranslateCTM(context, 0.0, bounds.size.height);
+        CGContextScaleCTM(context, 1.0, -1.0);
+        
+        // draw gradient
+        CGContextClipToRect(context, bounds);
+        CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
+        CGContextFillRect(context, bounds);
+        
+        NSArray *colors = [NSArray arrayWithObjects:
+                           (id)[UIColor colorWithWhite:0.9f alpha:0.15f].CGColor,
+                           (id)[UIColor colorWithWhite:0.9f alpha:0.1f].CGColor,
+                           (id)[UIColor clearColor].CGColor,
+                           (id)[UIColor clearColor].CGColor,
+                           nil];
+        
+        CGFloat locations[4] = {0.0,0.5,0.5,1.0};
+        
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGGradientRef colorGradient = CGGradientCreateWithColors(colorSpace, (__bridge  CFArrayRef)colors, locations);
+        
+        CGPoint start = CGPointMake(bounds.origin.x + bounds.size.width, bounds.origin.y);
+        CGPoint end = CGPointMake(bounds.origin.x, bounds.origin.y);
+        
+        CGContextDrawLinearGradient(context, colorGradient, start, end, 0);
+        
+        CGGradientRelease(colorGradient);
+        CGContextRestoreGState(context);
+    }
+    
+}
+
 
 #pragma mark -
 #pragma mark FSVerticalTabBar
@@ -137,6 +166,9 @@
         UIImage *defaultSelectionIndicatorImage = [UIImage imageNamed:@"selectionIndicatorImage"];
         defaultSelectionIndicatorImage = [defaultSelectionIndicatorImage resizableImageWithCapInsets:UIEdgeInsetsMake(2, 6, 2, 6)];
         _selectionIndicatorImage = defaultSelectionIndicatorImage;
+
+        self.drawGloss = NO;
+        self.tintColor = [UIColor blackColor];
     }
     return self;
 }
