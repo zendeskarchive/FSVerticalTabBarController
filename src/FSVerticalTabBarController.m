@@ -49,7 +49,14 @@
         NSMutableArray *tabBarItems = [NSMutableArray arrayWithCapacity:[self.viewControllers count]];
         for (UIViewController *vc in self.viewControllers)
         {
-            [tabBarItems addObject:vc.tabBarItem];
+            if([vc isKindOfClass:[UIPopoverController class]])
+            {
+                [tabBarItems addObject:((UIPopoverController *)vc).contentViewController.tabBarItem];
+            }
+            else 
+            {
+                [tabBarItems addObject:vc.tabBarItem];
+            }
         }
         self.tabBar.items = tabBarItems;
     }
@@ -83,20 +90,24 @@
     {
         // add new view controller to hierarchy
         UIViewController *selectedViewController = [self.viewControllers objectAtIndex:selectedIndex];
-        [self addChildViewController:selectedViewController];
-        selectedViewController.view.frame = CGRectMake(self.tabBarWidth,
+        
+        if(![selectedViewController isKindOfClass:[UIPopoverController class]])
+        {
+            [self addChildViewController:selectedViewController];
+            selectedViewController.view.frame = CGRectMake(self.tabBarWidth,
                                                        0,
                                                        self.view.bounds.size.width-self.tabBarWidth,
                                                        self.view.bounds.size.height);
-        selectedViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-        [self.view addSubview:selectedViewController.view];
+            selectedViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+            [self.view addSubview:selectedViewController.view];
         
-        // remove previously selected view controller (if any)
-        if (-1 < _selectedIndex && _selectedIndex < INT_MAX)
-        {
-            UIViewController *previousViewController = [self.viewControllers objectAtIndex:_selectedIndex];
-            [previousViewController.view removeFromSuperview];
-            [previousViewController removeFromParentViewController];
+            // remove previously selected view controller (if any)
+            if (-1 < _selectedIndex && _selectedIndex < INT_MAX)
+            {
+                UIViewController *previousViewController = [self.viewControllers objectAtIndex:_selectedIndex];
+                [previousViewController.view removeFromSuperview];
+                [previousViewController removeFromParentViewController];
+            }
         }
 
         // set new selected index
@@ -189,7 +200,7 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BOOL result;
+    BOOL result = NO;
     
     if ([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
         UIViewController *newController = [self.viewControllers objectAtIndex:indexPath.row];
