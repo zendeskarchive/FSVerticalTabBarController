@@ -38,13 +38,16 @@
     [((UIViewController*)[controllersToAdd objectAtIndex:2]).view setBackgroundColor:[UIColor greenColor]];
     [((UIViewController*)[controllersToAdd objectAtIndex:3]).view setBackgroundColor:[UIColor purpleColor]];
     
-    //Popover
-    PopoverController *popOverView = [self.storyboard instantiateViewControllerWithIdentifier:@"Popover"];
-    popOverView.delegate = self;
-    popOverView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Popover" image:[UIImage imageNamed:@"magnifying-glass.png"] tag: 0];
-    self.popOver = [[UIPopoverController alloc] initWithContentViewController:popOverView];
-    [controllersToAdd addObject:self.popOver];
-    self.popOver.popoverContentSize = CGSizeMake(400, 200);
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        //Popover
+        PopoverController *popOverView = [self.storyboard instantiateViewControllerWithIdentifier:@"Popover"];
+        popOverView.delegate = self;
+        popOverView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Popover" image:[UIImage imageNamed:@"magnifying-glass.png"] tag: 0];
+        self.popOver = [[UIPopoverController alloc] initWithContentViewController:popOverView];
+        [controllersToAdd addObject:self.popOver];
+        self.popOver.popoverContentSize = CGSizeMake(400, 200);
+    }
     
 
     viewControllers = [NSArray arrayWithArray:controllersToAdd];
