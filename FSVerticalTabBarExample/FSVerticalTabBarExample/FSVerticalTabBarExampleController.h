@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FSVerticalTabBarController.h"
+#import "PopoverController.h"
 
-@interface FSVerticalTabBarExampleController : FSVerticalTabBarController<FSTabBarControllerDelegate>
+@interface FSVerticalTabBarExampleController : FSVerticalTabBarController<FSTabBarControllerDelegate, UIPopoverControllerDelegate, PopoverDelegate>
+
+@property (nonatomic, strong) UIPopoverController *popOver;
 
 
 @end

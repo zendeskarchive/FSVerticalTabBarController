@@ -19,5 +19,7 @@
 @property (nonatomic, readwrite, strong) UIColor *selectedImageTintColor;
 @property (nonatomic, readwrite, strong) UIImage *selectionIndicatorImage;
 
+-(CGRect)getFrameForSelectedCell;
+
 
 @end

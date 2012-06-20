@@ -175,4 +175,10 @@
     return cell;
 }
 
+-(CGRect)getFrameForSelectedCell
+{
+    NSIndexPath *indexPath = [self indexPathForSelectedRow];
+    return [self cellForRowAtIndexPath:indexPath].frame;
+}
+
 @end

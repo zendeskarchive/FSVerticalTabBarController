@@ -13,6 +13,7 @@
 		0923DAF215656F6A004CFAB8 /* FSVerticalTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */; };
 		0923DAF315656F6A004CFAB8 /* selectionIndicatorImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0923DAEE15656F6A004CFAB8 /* selectionIndicatorImage.png */; };
 		0923DAF415656F6A004CFAB8 /* selectionIndicatorImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0923DAEF15656F6A004CFAB8 /* selectionIndicatorImage@2x.png */; };
+		3D5DDD711591038B00E6DDF4 /* PopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5DDD701591038B00E6DDF4 /* PopoverController.m */; };
 		FD1AC80B15584B7300A8E36A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80A15584B7300A8E36A /* UIKit.framework */; };
 		FD1AC80D15584B7300A8E36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80C15584B7300A8E36A /* Foundation.framework */; };
 		FD1AC80F15584B7300A8E36A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 		0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarController.m; path = ../src/FSVerticalTabBarController.m; sourceTree = SOURCE_ROOT; };
 		0923DAEE15656F6A004CFAB8 /* selectionIndicatorImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selectionIndicatorImage.png; path = ../src/selectionIndicatorImage.png; sourceTree = SOURCE_ROOT; };
 		0923DAEF15656F6A004CFAB8 /* selectionIndicatorImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectionIndicatorImage@2x.png"; path = "../src/selectionIndicatorImage@2x.png"; sourceTree = SOURCE_ROOT; };
+		3D5DDD6F1591038B00E6DDF4 /* PopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverController.h; sourceTree = "<group>"; };
+		3D5DDD701591038B00E6DDF4 /* PopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverController.m; sourceTree = "<group>"; };
 		FD1AC80615584B7300A8E36A /* FSVerticalTabBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSVerticalTabBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1AC80A15584B7300A8E36A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FD1AC80C15584B7300A8E36A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +109,8 @@
 		FD1AC81015584B7300A8E36A /* FSVerticalTabBarExample */ = {
 			isa = PBXGroup;
 			children = (
+				3D5DDD6F1591038B00E6DDF4 /* PopoverController.h */,
+				3D5DDD701591038B00E6DDF4 /* PopoverController.m */,
 				FD27F21315596C5E0054F11E /* MainStoryboard_iPhone.storyboard */,
 				FD27F21415596C5E0054F11E /* MainStoryboard_iPad.storyboard */,
 				FD1AC81915584B7300A8E36A /* FSAppDelegate.h */,
@@ -219,6 +224,7 @@
 				0923DAF015656F6A004CFAB8 /* FSVerticalTabBar.m in Sources */,
 				0923DAF115656F6A004CFAB8 /* FSVerticalTabBarButton.m in Sources */,
 				0923DAF215656F6A004CFAB8 /* FSVerticalTabBarController.m in Sources */,
+				3D5DDD711591038B00E6DDF4 /* PopoverController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
