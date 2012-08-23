@@ -15,7 +15,12 @@
 @property (nonatomic, readwrite, copy) NSArray *items;
 @property (nonatomic, readwrite, assign) UITabBarItem *selectedItem;
 @property (nonatomic, readwrite, strong) UIImage *backgroundImage;
-@property (nonatomic, readwrite, strong) NSArray *backgroundGradientColors;
+
+@property (nonatomic, strong) UIColor *tintColor;
+
+/* should tabbar gradient-gloss be drawn */
+@property (nonatomic, assign) BOOL drawGloss;
+
 @property (nonatomic, readwrite, strong) UIColor *selectedImageTintColor;
 @property (nonatomic, readwrite, strong) UIImage *selectionIndicatorImage;
 
