@@ -56,7 +56,7 @@
     
     // select first VC from the new array
     // sets the value for the first time as -1 for the viewController to load itself properly
-    _selectedIndex = -1;
+    _selectedIndex = NSNotFound;
     
     self.selectedIndex = [viewControllers count] > 0 ? 0 : INT_MAX;
 }
@@ -92,7 +92,7 @@
         [self.view addSubview:selectedViewController.view];
         
         // remove previously selected view controller (if any)
-        if (-1 < _selectedIndex && _selectedIndex < INT_MAX)
+        if (_selectedIndex != NSNotFound)
         {
             UIViewController *previousViewController = [self.viewControllers objectAtIndex:_selectedIndex];
             [previousViewController.view removeFromSuperview];
@@ -120,7 +120,7 @@
 - (void)_performInitialization
 {
     self.tabBarWidth = DEFAULT_TAB_BAR_HEIGHT;
-    self.selectedIndex = INT_MAX;
+    self.selectedIndex = NSNotFound;
 }
 
 
