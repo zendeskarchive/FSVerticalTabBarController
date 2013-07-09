@@ -6,6 +6,12 @@ There's no controller for customizing the tab bar in runtime (aka "More" tab), i
 
 While some may find it production ready there's still many things that can be added/improved/(fixed), thus all contributions are welcomed. Here's a sneak peek at how it looks like with 120px with tab bar and a textured image as background.
 
+<!-- MacBuildServer Install Button -->
+<div class="macbuildserver-block">
+    <a class="macbuildserver-button" href="http://macbuildserver.com/project/github/build/?xcode_project=FSVerticalTabBarExample%2FFSVerticalTabBarExample.xcodeproj&amp;target=FSVerticalTabBarExample&amp;repo_url=git%3A%2F%2Fgithub.com%2Ffuturesimple%2FFSVerticalTabBarController.git&amp;build_conf=Release" target="_blank"><img src="http://com.macbuildserver.github.s3-website-us-east-1.amazonaws.com/button_up.png"/></a><br/><sup><a href="http://macbuildserver.com/github/opensource/" target="_blank">by MacBuildServer</a></sup>
+</div>
+<!-- MacBuildServer Install Button -->
+
 ![](https://github.com/futuresimple/FSVerticalTabBarController/raw/master/images/sample_screenshot.png)
 
 Currently includes a sample Universal project that will run on iPad and iPhone.  Basic usage is as follows:
