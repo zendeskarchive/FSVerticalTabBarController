@@ -170,7 +170,23 @@
     
     UITabBarItem *item = [self.items objectAtIndex:indexPath.row];
     cell.textLabel.text = item.title;
-    cell.iconImage = item.image;
+    
+    //add non-selected image
+    if(item.image != nil)
+    {
+        cell.iconImage = item.image;
+    } else if(item.image == nil && item.finishedUnselectedImage != nil)
+    {
+        //sometimes users will define the tabBar image through [tabBar setFinishedSelectedImage: withFinishedUnselectedImage:]
+        cell.iconImage = item.finishedUnselectedImage;
+    }
+    
+    //see if there is a selected image to show
+    if(item.finishedSelectedImage != nil)
+    {
+        cell.iconSelectedImage = item.finishedSelectedImage;
+    }
+    
     
     return cell;
 }

@@ -14,6 +14,7 @@
 
 @synthesize selectedImageTintColor = _selectedImageTintColor;
 @synthesize iconImage = _iconImage;
+@synthesize iconSelectedImage = _iconSelectedImage;
 
 
 - (UIColor *)selectedImageTintColor
@@ -53,8 +54,15 @@
                                   imageSize.width,
                                   imageSize.height);
     
-    // draw either a selection gradient/glow or a regular image
-    if (self.isSelected)
+    // draw a selection gradient/glow, the selected image, or a regular image
+    if (self.isSelected && self.iconSelectedImage != nil)
+    {
+        //item is selected and we have a selected image to show
+        CGContextDrawImage(context,
+                           imageRect,
+                           self.iconSelectedImage.CGImage);
+        
+    } else if (self.isSelected)
     {
         // setup shadow
         CGSize shadowOffset = CGSizeMake(0.0f, 1.0f);

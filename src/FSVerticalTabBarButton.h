@@ -14,6 +14,7 @@
 
 @property (nonatomic, readwrite, assign) UIColor *selectedImageTintColor;
 @property (nonatomic, readwrite, strong) UIImage *iconImage;
+@property (nonatomic, readwrite, strong) UIImage *iconSelectedImage;
 
 
 @end
