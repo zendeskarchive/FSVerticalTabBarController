@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		061C61F215712A3E00E644A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061C61F115712A3E00E644A0 /* QuartzCore.framework */; };
-		0923DAF015656F6A004CFAB8 /* FSVerticalTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAE915656F6A004CFAB8 /* FSVerticalTabBar.m */; };
-		0923DAF115656F6A004CFAB8 /* FSVerticalTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAEB15656F6A004CFAB8 /* FSVerticalTabBarButton.m */; };
-		0923DAF215656F6A004CFAB8 /* FSVerticalTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */; };
-		0923DAF315656F6A004CFAB8 /* selectionIndicatorImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0923DAEE15656F6A004CFAB8 /* selectionIndicatorImage.png */; };
-		0923DAF415656F6A004CFAB8 /* selectionIndicatorImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0923DAEF15656F6A004CFAB8 /* selectionIndicatorImage@2x.png */; };
+		783C22161BE74339A3522AB8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D8FFE7178F403599EFA77B /* libPods.a */; };
 		FD1AC80B15584B7300A8E36A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80A15584B7300A8E36A /* UIKit.framework */; };
 		FD1AC80D15584B7300A8E36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80C15584B7300A8E36A /* Foundation.framework */; };
 		FD1AC80F15584B7300A8E36A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */; };
@@ -29,14 +25,8 @@
 
 /* Begin PBXFileReference section */
 		061C61F115712A3E00E644A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0923DAE815656F6A004CFAB8 /* FSVerticalTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBar.h; path = ../src/FSVerticalTabBar.h; sourceTree = SOURCE_ROOT; };
-		0923DAE915656F6A004CFAB8 /* FSVerticalTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBar.m; path = ../src/FSVerticalTabBar.m; sourceTree = SOURCE_ROOT; };
-		0923DAEA15656F6A004CFAB8 /* FSVerticalTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBarButton.h; path = ../src/FSVerticalTabBarButton.h; sourceTree = SOURCE_ROOT; };
-		0923DAEB15656F6A004CFAB8 /* FSVerticalTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarButton.m; path = ../src/FSVerticalTabBarButton.m; sourceTree = SOURCE_ROOT; };
-		0923DAEC15656F6A004CFAB8 /* FSVerticalTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVerticalTabBarController.h; path = ../src/FSVerticalTabBarController.h; sourceTree = SOURCE_ROOT; };
-		0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVerticalTabBarController.m; path = ../src/FSVerticalTabBarController.m; sourceTree = SOURCE_ROOT; };
-		0923DAEE15656F6A004CFAB8 /* selectionIndicatorImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selectionIndicatorImage.png; path = ../src/selectionIndicatorImage.png; sourceTree = SOURCE_ROOT; };
-		0923DAEF15656F6A004CFAB8 /* selectionIndicatorImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectionIndicatorImage@2x.png"; path = "../src/selectionIndicatorImage@2x.png"; sourceTree = SOURCE_ROOT; };
+		22734BA23FCA494B886B73CB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C0D8FFE7178F403599EFA77B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1AC80615584B7300A8E36A /* FSVerticalTabBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSVerticalTabBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1AC80A15584B7300A8E36A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FD1AC80C15584B7300A8E36A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +55,7 @@
 				FD1AC80B15584B7300A8E36A /* UIKit.framework in Frameworks */,
 				FD1AC80D15584B7300A8E36A /* Foundation.framework in Frameworks */,
 				FD1AC80F15584B7300A8E36A /* CoreGraphics.framework in Frameworks */,
+				783C22161BE74339A3522AB8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +68,10 @@
 				FD1AC8401558570C00A8E36A /* ios-linen.png */,
 				FD1AC83815584E5400A8E36A /* magnifying-glass.png */,
 				FD1AC83915584E5400A8E36A /* magnifying-glass@2x.png */,
-				FD1AC82A15584B8400A8E36A /* FSVerticalTabBarController */,
 				FD1AC81015584B7300A8E36A /* FSVerticalTabBarExample */,
 				FD1AC80915584B7300A8E36A /* Frameworks */,
 				FD1AC80715584B7300A8E36A /* Products */,
+				22734BA23FCA494B886B73CB /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +90,7 @@
 				FD1AC80A15584B7300A8E36A /* UIKit.framework */,
 				FD1AC80C15584B7300A8E36A /* Foundation.framework */,
 				FD1AC80E15584B7300A8E36A /* CoreGraphics.framework */,
+				C0D8FFE7178F403599EFA77B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,22 +120,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FD1AC82A15584B8400A8E36A /* FSVerticalTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				0923DAE815656F6A004CFAB8 /* FSVerticalTabBar.h */,
-				0923DAE915656F6A004CFAB8 /* FSVerticalTabBar.m */,
-				0923DAEA15656F6A004CFAB8 /* FSVerticalTabBarButton.h */,
-				0923DAEB15656F6A004CFAB8 /* FSVerticalTabBarButton.m */,
-				0923DAEC15656F6A004CFAB8 /* FSVerticalTabBarController.h */,
-				0923DAED15656F6A004CFAB8 /* FSVerticalTabBarController.m */,
-				0923DAEE15656F6A004CFAB8 /* selectionIndicatorImage.png */,
-				0923DAEF15656F6A004CFAB8 /* selectionIndicatorImage@2x.png */,
-			);
-			name = FSVerticalTabBarController;
-			path = src;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD1AC82715584B7300A8E36A /* Build configuration list for PBXNativeTarget "FSVerticalTabBarExample" */;
 			buildPhases = (
+				8A6A1A9A62E84B159025FB14 /* Check Pods Manifest.lock */,
 				FD1AC80215584B7300A8E36A /* Sources */,
 				FD1AC80315584B7300A8E36A /* Frameworks */,
 				FD1AC80415584B7300A8E36A /* Resources */,
+				4A60575917F24A91923F5000 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,12 +179,43 @@
 				FD1AC8411558570C00A8E36A /* ios-linen.png in Resources */,
 				FD27F21515596C5E0054F11E /* MainStoryboard_iPhone.storyboard in Resources */,
 				FD27F21615596C5E0054F11E /* MainStoryboard_iPad.storyboard in Resources */,
-				0923DAF315656F6A004CFAB8 /* selectionIndicatorImage.png in Resources */,
-				0923DAF415656F6A004CFAB8 /* selectionIndicatorImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A60575917F24A91923F5000 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A6A1A9A62E84B159025FB14 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD1AC80215584B7300A8E36A /* Sources */ = {
@@ -216,9 +225,6 @@
 				FD1AC81715584B7300A8E36A /* main.m in Sources */,
 				FD1AC81B15584B7300A8E36A /* FSAppDelegate.m in Sources */,
 				FD1AC82415584B7300A8E36A /* FSVerticalTabBarExampleController.m in Sources */,
-				0923DAF015656F6A004CFAB8 /* FSVerticalTabBar.m in Sources */,
-				0923DAF115656F6A004CFAB8 /* FSVerticalTabBarButton.m in Sources */,
-				0923DAF215656F6A004CFAB8 /* FSVerticalTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +291,7 @@
 		};
 		FD1AC82815584B7300A8E36A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22734BA23FCA494B886B73CB /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FSVerticalTabBarExample/FSVerticalTabBarExample-Prefix.pch";
@@ -296,6 +303,7 @@
 		};
 		FD1AC82915584B7300A8E36A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22734BA23FCA494B886B73CB /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FSVerticalTabBarExample/FSVerticalTabBarExample-Prefix.pch";
