@@ -199,7 +199,7 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BOOL result;
+    BOOL result=YES;
     
     if ([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
         UIViewController *newController = [self.viewControllers objectAtIndex:indexPath.row];
