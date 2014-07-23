@@ -66,7 +66,7 @@
 }
 
 -(BOOL)tabBarController:(FSVerticalTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-    if ([viewControllers indexOfObject:viewController] == 3) {
+    if ([viewControllers indexOfObject:viewController] == 4) {
         return NO;
     }
     return YES;
