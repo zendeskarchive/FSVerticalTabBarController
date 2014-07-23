@@ -15,7 +15,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-       [[FSVerticalTabBarController alloc] init];
      return YES;
 }
 							
