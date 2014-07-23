@@ -19,14 +19,6 @@
 
 @implementation FSVerticalTabBarController
 
-
-@synthesize delegate = _delegate;
-@synthesize tabBar = _tabBar;
-@synthesize viewControllers = _viewControllers;
-@synthesize selectedIndex = _selectedIndex;
-@synthesize tabBarWidth = _tabBarWidth;
-
-
 - (FSVerticalTabBar *)tabBar
 {
     if (_tabBar == nil)
@@ -37,7 +29,6 @@
     }
     return _tabBar;
 }
-
 
 - (void)setViewControllers:(NSArray *)viewControllers
 {
@@ -61,7 +52,6 @@
     self.selectedIndex = [viewControllers count] > 0 ? 0 : INT_MAX;
 }
 
-
 - (UIViewController *)selectedViewController
 {
     if (self.selectedIndex < [self.viewControllers count])
@@ -70,7 +60,6 @@
     }
     return nil;
 }
-
 
 - (void)setSelectedViewController:(UIViewController *)selectedViewController
 {
@@ -116,13 +105,11 @@
     }
 }
 
-
 - (void)_performInitialization
 {
     self.tabBarWidth = DEFAULT_TAB_BAR_HEIGHT;
     self.selectedIndex = NSNotFound;
 }
-
 
 #pragma mark -
 #pragma mark UIViewController
@@ -145,7 +132,6 @@
     return self;
 }
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -154,7 +140,6 @@
     }
     return self;
 }
-
 
 - (void)loadView
 {
@@ -170,7 +155,6 @@
     self.view = layoutContainerView;
 }
 
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     UIViewController *selectedViewController = self.selectedViewController;
@@ -181,14 +165,12 @@
     return YES;
 }
 
-
 #pragma mark -
 #pragma mark FSVerticalTabBarController
 - (void)setViewControllers:(NSArray *)viewControllers animated:(BOOL)animated
 {
     self.viewControllers = viewControllers;
 }
-
 
 #pragma mark -
 #pragma mark <UITableViewDelegate>
@@ -213,6 +195,5 @@
         return tableView.indexPathForSelectedRow;
     }
 }
-
 
 @end

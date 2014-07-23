@@ -11,17 +11,11 @@
 
 @implementation FSVerticalTabBarButton
 
-
-@synthesize selectedImageTintColor = _selectedImageTintColor;
-@synthesize iconImage = _iconImage;
-
-
 - (UIColor *)selectedImageTintColor
 {
     // use blue tint by default
     return _selectedImageTintColor != nil ? _selectedImageTintColor : [UIColor colorWithRed:41.0/255.0 green:147.0/255.0 blue:239.0/255.0 alpha:1.0];
 }
-
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -35,7 +29,6 @@
     }
     return self;
 }
-
 
 - (void)drawRect:(CGRect)rect
 {
@@ -99,7 +92,6 @@
     }
 }
 
-
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -112,19 +104,16 @@
     self.textLabel.frame = textLabelFrame;
 }
 
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
     [self setNeedsDisplay];
 }
 
-
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
 {
     [super setHighlighted:highlighted animated:animated];
     [self setNeedsDisplay];
 }
-
 
 @end

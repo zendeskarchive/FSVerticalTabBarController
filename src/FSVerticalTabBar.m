@@ -17,18 +17,11 @@
 @implementation FSVerticalTabBar
 
 
-@synthesize items = _items;
-@synthesize backgroundImage = _backgroundImage;
-@synthesize selectedImageTintColor = _selectedImageTintColor;
-@synthesize selectionIndicatorImage = _selectionIndicatorImage;
-@synthesize backgroundGradientColors = _backgroundGradientColors;
-
 - (void)setItems:(NSArray *)items
 {
     _items = [items copy];
     [self reloadData];
 }
-
 
 - (void)setSelectionIndicatorImage:(UIImage *)selectionIndicatorImage
 {
@@ -36,7 +29,6 @@
     // apply changes
     [self reloadData];
 }
-
 
 - (void)setSelectedImageTintColor:(UIColor *)selectedImageTintColor
 {
@@ -94,7 +86,6 @@
     }
 }
 
-
 - (void)setSelectedItem:(UITabBarItem *)selectedItem
 {
     NSUInteger selectedItemIndex = [self.items indexOfObject:selectedItem];
@@ -106,7 +97,6 @@
                     scrollPosition:UITableViewRowAnimationTop];
     }
 }
-
 
 - (UITabBarItem *)selectedItem
 {
