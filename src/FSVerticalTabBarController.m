@@ -181,19 +181,17 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BOOL result;
+    NSIndexPath *pathToReturn;
     
     if ([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
         UIViewController *newController = [self.viewControllers objectAtIndex:indexPath.row];
-        result = [self.delegate tabBarController:self shouldSelectViewController:newController];
+        if([self.delegate tabBarController:self shouldSelectViewController:newController]){
+            pathToReturn = indexPath;
+        }
+    } else {
+        pathToReturn = tableView.indexPathForSelectedRow;
     }
-    
-    if (result) {
-        return indexPath;
-    }
-    else {
-        return tableView.indexPathForSelectedRow;
-    }
+    return pathToReturn;
 }
 
 @end
